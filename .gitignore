@@ -1,0 +1,8 @@
+# Environment files
+.n8n.env
+.env
+secrets.ini
+
+# Editor files
+.idea/
+.vscode/

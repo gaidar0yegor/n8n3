@@ -1,7 +1,16 @@
 [plugins.postgres]
 version = "15"
 
+[plugins.redis]
+version = "7"
+
+[plugins.heroku]
+version = "latest"
+
 [variables]
+REDISHOST="${REDISHOST}"
+REDISPORT="${REDISPORT}"
+REDISPASSWORD="${REDISPASSWORD}"
 DB_TYPE = "postgresdb"
 DB_POSTGRESDB_DATABASE = "${PGDATABASE}"
 DB_POSTGRESDB_HOST = "${PGHOST}"
