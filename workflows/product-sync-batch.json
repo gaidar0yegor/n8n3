@@ -1,0 +1,28 @@
+{
+  "name": "Batch Product Sync",
+  "nodes": [
+    {
+      "type": "n8n-nodes-base.splitInBatches",
+      "name": "SplitInBatches",
+      "parameters": {
+        "batchSize": 50
+      }
+    },
+    {
+      "type": "n8n-nodes-base.odoo",
+      "name": "Odoo Bulk Query",
+      "parameters": {
+        "cache": true,
+        "cacheTtl": 3600
+      }
+    },
+    {
+      "type": "n8n-nodes-base.supabase",
+      "name": "Supabase Batch Update",
+      "parameters": {
+        "batchSize": 50,
+        "cache": true
+      }
+    }
+  ]
+}
